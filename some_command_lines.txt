@@ -1,0 +1,10 @@
+COPY atomic_events FROM 'D:\Aisensum\Projects\Jualo\events2' (DELIMITER '|', ESCAPE '\', QUOTE E'\b', FORMAT CSV);
+
+SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = '<databasename>'
+AND pid <> pg_backend_pid();
+
+SELECT nspname FROM pg_catalog.pg_namespace;
+
+SET search_path TO myschema;

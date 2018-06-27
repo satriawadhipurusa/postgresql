@@ -1,0 +1,6 @@
+SELECT * 
+FROM customer 
+
+-- YOUR QUERY HERE 
+
+LIMIT 5;
